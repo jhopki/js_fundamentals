@@ -38,8 +38,32 @@
 // Add a script tag to the bottom.
 // Change the body style so it has a font-family of "Arial, sans-serif".
 // Replace each of the spans (nickname, favorites, hometown) with your own information.
-// Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red.
+// Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to 
+// make the color red.
 // Create a new img element and set its src attribute to a picture of you. Append that element to the page.
+
+var text = document.getElementsByTagName('body')[0];
+text.style.fontFamily = 'Arial, sans-serif';
+var nickname = document.getElementById('nickname');
+nickname.textContent = "Jules";
+var favorites = document.getElementById('favorites');
+favorites.textContent = "Favourite what?";
+var hometown = document.getElementById('hometown');
+hometown.textContent = "Kingston";
+
+var x = document.getElementsByTagName('li');
+for (var i = 0; i < x.length; i++) {
+  x[i].setAttribute('class', 'listitem');
+}
+var listitems = document.getElementsByClassName('listitem');
+
+for (var i = 0; i < x.length; i++) {
+  listitems[i].style.color = 'red';
+}
+
+var newImg = document.createElement('img');
+newImg.src = 'imageOfMe';
+text.appendChild(newImg);
 
 // EXERCISE: The Book List
 
